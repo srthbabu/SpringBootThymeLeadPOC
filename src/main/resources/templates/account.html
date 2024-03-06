@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>""</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylingsheet.css">
+</head>
+<body>
+<div align="center">
+    <h3 style="color:#51A0D5;" th:text="${something}"/>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr> <!--th:each="acc : ${Account}">-->
+            <td th:text="${Account.emp_id}"/>
+            <td th:text="${Account.emp_name}"/>
+            <!--<td>
+                <a th:text="${emp.emp_name}"></a>
+            </td>-->
+            <td th:text="${Account.emp_salary}"/>
+            <td th:text="${Account.emp_email}"/>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
